@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the Day</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+
+</head>
+
+<body class="flex h-screen w-screen items-center justify-center bg-[#2e3440] text-[#d8dee9]">
+    <main id="quote-container" class="relative max-w-2xl w-full bg-center bg-cover 
+    shadow-xl">
+
+        <div class="flex flex-col w-full h-full shadow-xl backdrop-blur-sm
+        bg-[#3b4252]/85 gap-8 p-8">
+
+            <div class="w-full">
+                <p id="quote-content" class="text-2xl md:text-3xl font-serif text-[#eceff4] mb-4 leading-relaxed">
+                    Loading Quote...
+                </p>
+                <p id="quote-author" class="text-lg text-[#81a1c1] font-medium"></p>
+            </div>
+
+            <div class="flex w-full items-center justify-around gap-4">
+                <button id="new-quote" class="flex items-center bg-[#576CBC] text-[#eceff4] 
+                rounded-lg shadow-lg transition gap-2 px-3 py-2 hover:scale-105">
+                    <i class="fas fa-sync-alt"></i>
+                    <p class="font-semibold">New Quote</p>
+                </button>
+                <button id="copy-quote" class="flex items-center bg-[#A76F6F] text-[#eceff4] 
+                rounded-lg shadow-lg transition gap-2 px-3 py-2 hover:scale-105">
+                    <i class="fas fa-copy"></i>
+                    <p class="font-semibold">Copy</p>
+                </button>
+                <button id="export-quote" class="flex items-center bg-[#BE3144] text-[#eceff4] 
+                rounded-lg shadow-lg transition gap-2 px-3 py-2 hover:scale-105">
+                    <i class="fa-solid fa-download"></i>
+                    <p class="font-semibold">Export</p>
+                </button>
+                <button id="share-quote" class="flex items-center bg-[#1D1616] text-[#eceff4]  
+                rounded-lg shadow-lg transition gap-2 px-3 py-2 hover:scale-105">
+                    <i class="fab fa-x-twitter"></i>
+                    <p class="font-semibold">Share</p>
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div id="toast" class="fixed hidden top-4 left-1/2 transform -translate-x-1/2 font-bold bg-green-600 
+    text-[#fff] px-4 py-2 rounded-lg shadow-lg transition-opacity duration-300">
+        Quote Copied !
+    </div>
+
+    <script src="constants.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
