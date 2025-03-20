@@ -6,6 +6,9 @@ const newQuoteButton = document.getElementById(NEW_QUOTE_BUTTON_ID);
 const copyQuoteButton = document.getElementById(COPY_QUOTE_BUTTON_ID);
 const shareQuoteButton = document.getElementById(SHARE_QUOTE_BUTTON_ID);
 const exportQuoteButton = document.getElementById(EXPORT_QUOTE_BUTTON_ID);
+const exportQuoteButtonText = document.getElementById(
+  EXPORT_QUOTE_BUTTON_TEXT_ID
+);
 
 const toastContainer = document.getElementById(TOAST_CONTAINER_ID);
 
@@ -72,23 +75,23 @@ const shareQuoteOnTwitter = () => {
 };
 
 /**
- * @ref: 
+ * @ref:
  * https://medium.com/@tajammalmaqbool11/how-to-convert-your-html-dom-element-into-an-image-using-javascript-677d275294d8
  */
 const exportQuoteAsImage = async () => {
-  const quoteContainer = document.getElementById(QUOTE_CONTAINER_ID);
-
-  htmlToImage
-    .toPng(quoteContainer)
-    .then(function (dataUrl) {
-      var link = document.createElement("a");
-      link.download = "quote.png";
-      link.href = dataUrl;
-      link.click();
-    })
-    .catch(function (error) {
-      console.error("Oops, something went wrong!", error);
-    });
+  try {
+    exportQuoteButtonText.innerText = "Exporting...";
+    const dataURL = await htmlToImage.toPng(quotesContainer);
+    const link = document.createElement("a");
+    link.download = "quote.png";
+    link.href = dataURL;
+    link.click();
+  } catch (error) {
+    console.error("Error exporting quote:", error);
+    showToast("Error exporting quote");
+  } finally {
+    exportQuoteButtonText.innerText = "Export";
+  }
 };
 
 newQuoteButton.addEventListener("click", renderQuotes);

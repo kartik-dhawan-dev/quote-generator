@@ -1,4 +1,4 @@
-# Quote Generator 
+# Quote Generator
 
 A simple application that fetches and displays a random quote.
 
@@ -11,10 +11,9 @@ A simple application that fetches and displays a random quote.
 - Generates a random background for each quote.
 - Export quote directly as a image.
 
-
 ## Screenshots
 
-![screenshot](image.png)
+![Screenshot](image.png)
 
 ## Deployment Link
 

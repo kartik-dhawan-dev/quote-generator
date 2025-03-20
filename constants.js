@@ -8,6 +8,7 @@ const QUOTE_AUTHOR_ID = "quote-author";
 const NEW_QUOTE_BUTTON_ID = "new-quote";
 const COPY_QUOTE_BUTTON_ID = "copy-quote";
 const EXPORT_QUOTE_BUTTON_ID = "export-quote";
+const EXPORT_QUOTE_BUTTON_TEXT_ID = "export-quote-button-text";
 const SHARE_QUOTE_BUTTON_ID = "share-quote";
 
 const TOAST_CONTAINER_ID = "toast";
