@@ -14,8 +14,8 @@ A simple application that fetches and displays a random quote.
 
 ## Screenshots
 
-< Yet to be added >
+![screenshot](image.png)
 
 ## Deployment Link
 
-< Yet to be added >
+You can access the application [here](https://kartik-dhawan-dev.github.io/quote-generator/)

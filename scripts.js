@@ -4,9 +4,10 @@ const quotesAuthor = document.getElementById(QUOTE_AUTHOR_ID);
 
 const newQuoteButton = document.getElementById(NEW_QUOTE_BUTTON_ID);
 const copyQuoteButton = document.getElementById(COPY_QUOTE_BUTTON_ID);
-const toastContainer = document.getElementById(TOAST_CONTAINER_ID);
 const shareQuoteButton = document.getElementById(SHARE_QUOTE_BUTTON_ID);
 const exportQuoteButton = document.getElementById(EXPORT_QUOTE_BUTTON_ID);
+
+const toastContainer = document.getElementById(TOAST_CONTAINER_ID);
 
 const sharePostOnX = (postContent) =>
   window.open(
@@ -71,7 +72,8 @@ const shareQuoteOnTwitter = () => {
 };
 
 /**
- * @ref: https://medium.com/@tajammalmaqbool11/how-to-convert-your-html-dom-element-into-an-image-using-javascript-677d275294d8
+ * @ref: 
+ * https://medium.com/@tajammalmaqbool11/how-to-convert-your-html-dom-element-into-an-image-using-javascript-677d275294d8
  */
 const exportQuoteAsImage = async () => {
   const quoteContainer = document.getElementById(QUOTE_CONTAINER_ID);
